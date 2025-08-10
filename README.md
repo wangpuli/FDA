@@ -2,16 +2,16 @@
 
 The repo is the official implementation for the paper: [Few-Trial Neural Adaptation with Stable Latent Dynamics](https://icml.cc/virtual/2025/poster/44109).
 
-## Introduction
+### Introduction
 
-## Overall Architecture
+### Overall Architecture
 
-## Quickstart
+### Quickstart
 
-## Usage
+### Usage
 
-## Citation
+### Citation
 
-## Acknowledgement
+### Acknowledgement
 
-## Contact
+### Contact
