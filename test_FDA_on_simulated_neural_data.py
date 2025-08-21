@@ -12,7 +12,7 @@ from torch.utils.data import TensorDataset, DataLoader
 from sklearn.metrics import r2_score
 # ---- For Simulated Neural Data ---- #
 from ldns.data.latent_attractor import get_attractor_dataloaders
-from model.vanilla_iTransfomer import ConditionModel
+from condition.vanilla_iTransfomer import ConditionModel
 from config.model_config import ModelConfig
 from flow.models.SiT_models import SiT
 from flow.transport.transport import create_transport, Sampler
