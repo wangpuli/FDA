@@ -88,9 +88,7 @@ if __name__ == '__main__':
         src_day_spike.extend(day_spike_tmp)
         src_day_cursor_pos_xy.extend(day_cursor_pos_xy)
 
-    # set seed
-    seed = 0
-    setup_seed(seed=seed)
+    setup_seed(3)
     train_day_spike, test_day_spike, train_day_cursor, test_day_cursor = train_test_split(src_day_spike, src_day_cursor_pos_xy, test_size=1.0-src_train_ratio, random_state=0)
     
     # generate dataloader
@@ -164,7 +162,7 @@ if __name__ == '__main__':
     )
 
     (best_valid_r2, valid_r2_epoch, valid_r2_curve), model, pre_train_results = training_stage(train_config)
-    print('dataset name: %s, src date: %s, best valid r2: %.4f' % (dataset_name, src_data_date, best_valid_r2))
+    print('dataset name: %s, src date: %s, best valid r2: %.4f' % (dataset_name, data_date, best_valid_r2))
 
     # save pre-trained model
     ckpt_dir = f'./ckpt/{dataset_name}/pre_train'
@@ -176,4 +174,4 @@ if __name__ == '__main__':
         'valid_r2_curve': valid_r2_curve,
         'valid_r2_epoch': valid_r2_epoch,
         'best_valid_r2': best_valid_r2,
-    }, f'{ckpt_dir}/FDA_pretrain_src_{src_data_date}_seed_{seed}_best_valid_{best_valid_r2:.2f}.pth')
+    }, f'{ckpt_dir}/FDA_pretrain_src_{data_date}_best_valid_{best_valid_r2:.2f}.pth')
