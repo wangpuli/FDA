@@ -204,3 +204,6 @@ __marimo__/
 
 # dataset folders
 datasets/
+
+# pre-trained & ft models
+ckpt/
