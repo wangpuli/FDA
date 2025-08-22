@@ -72,11 +72,12 @@ conda env create -f environment.yml
 
 #### Results and Models
 
-We ran `test_FDA_on_spikes_pretrain.py` and `test_FDA_on_spikes_ft.py` on an NVIDIA 1080Ti (11GB) and obtained the $R^2$ values for source and target sessions from the RT-M dataset, as summarized in the table below:
+We ran `test_FDA_on_spikes_pretrain.py` and `test_FDA_on_spikes_ft.py` on an NVIDIA 1080Ti (11GB) and obtained the R2 values (%) for source and target sessions from the RT-M dataset, as summarized in the table below:
 
 | Day | 1    | 38   | 39   | 40   | 52   | 53   | 67   | 69   | 77   | 79   |
 |:---:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| $R^2(\%)$ | 71.84 | 67.73 | 56.05 | 50.79 | 46.20 | 53.46 | 48.05 | 25.85 | 14.64 | 40.21 |
+| R2(%) | 71.84 | 67.73 | 56.05 | 50.79 | 46.20 | 53.46 | 48.05 | 25.85 | 14.64 | 40.21 |
+
 
 The resulting pre-trained and fine-tuned FDA models on RT-M are publicly available on [Huggingface](https://huggingface.co/plwang/FDA) under the `pre_train` and `ft` folders.
 
